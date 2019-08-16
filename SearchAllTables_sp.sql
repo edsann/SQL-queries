@@ -2,6 +2,8 @@
 /* Executing it, the value of the parameter @SearchStr will be asked */
 /* It returns [schema].[table].[column];value */
 
+/* It only works with strings */
+
 CREATE PROC SearchAllTables
 (
 @SearchStr nvarchar(100)
