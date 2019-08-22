@@ -1,19 +1,13 @@
 /* Search all columns containing a specific string, stating also the belonging tables */
 
 USE
-	/* Insert your database name */
-	DATABASENAME									
+	DATABASENAME --Insert your database name
 SELECT 
-	/* Column Name */
-	Columns.name AS ColumnName,
-	/* Belonging table name */
-	Tables.name AS TableName
+	Columns.name AS ColumnName --Column name
+	Tables.name AS TableName --Table name
 FROM
-	/* Column in the database schema */
-	sys.columns Columns
+	sys.columns Columns --Columns in the database schema
 JOIN
-	/* Correspondence column-table */
-	sys.tables Tables ON Columns.object_id = Tables.object_id
+	sys.tables Tables ON Columns.object_id = Tables.object_id --Correspondence column-name
 WHERE
-	/* Filter on the column name, insert here the searching string */
-	Columns.name LIKE '%%'
+	Columns.name LIKE '%%' --Filter on the column name, insert here the searching string
