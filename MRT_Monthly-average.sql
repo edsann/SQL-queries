@@ -1,3 +1,5 @@
+/* Author: P.Simonetta */
+
 /* It returns a table containing a row for each day in the following format:
 	YYYYMMDD;Amount_of_employees;Amount_of_external_collaborators;Amount_of_guests;Total_amount
 For each day of the month. At the end of the month, it builds an additional row in the following format:
