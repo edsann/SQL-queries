@@ -1,5 +1,6 @@
 /* VERY Quick cheatsheet */
 
+/* 1. DDL i.e. Data Definition Language */
 
 /* Create new database with name DatabaseName according to the model's database properties */
 CREATE DatabaseName;
@@ -21,3 +22,7 @@ DROP Attribute2
 
 /* Remove the whole table */
 DROP TABLE TableName
+
+/* 2. DML i.e. Data Manipulation Language */
+
+
