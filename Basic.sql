@@ -15,6 +15,17 @@ CREATE TABLE TableName(
   CONSTRAINT PK_TableName PRIMARY KEY CLUSTERED (Attribute1) 
 )
 
+/* Add a constraint with a specific criterion on an attribute of the table */
+ALTER TABLE TableName
+ADD CONSTRAINT CK_Attribute1
+CHECK (Attribute1 [condition])
+-- To remove it
+DROP CONSTRAINT CK_Attribute1
+
+/* Add a Unique Index to check uniqueness */
+CREATE UNIQUE INDEX IX_Attribute1
+ON TableName(Attribute1)
+                   
 /* Erase the content of the table, though keeping the columns intact */
 TRUNCATE TABLE TableName
 
