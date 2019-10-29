@@ -10,8 +10,9 @@ USE DatabaseName;
 
 /* Create a new table with name TableName and the following content */
 CREATE TABLE TableName( 
-  Attribute1 type1 IDENTITY(1000,1) NOT NULL   --Attribute of type1 (int, char-varchar-nvarchar(length), money, date, etc.); Identity is a value that increases automatically, starting from 1000 and increasing by 1; no NULL values are allowed
-  Attribute2 type2 NULL
+  Attribute1 type1 IDENTITY(1000,1) NOT NULL,   --Attribute of type1 (int, char-varchar-nvarchar(length), money, date, etc.); Identity is a value that increases automatically, starting from 1000 and increasing by 1; no NULL values are allowed
+  Attribute2 type2 NULL,
+  CONSTRAINT PK_TableName PRIMARY KEY CLUSTERED (Attribute1) 
 )
 
 /* Erase the content of the table, though keeping the columns intact */
