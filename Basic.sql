@@ -1,5 +1,9 @@
 /* VERY Quick cheatsheet */
 
+/* Shortcuts */
+-- ctrl + shift + r = refresh the IntelliSense cache
+-- Alt + q + s = parameter menu for stored procedures (SSMS >= 2012)
+
 /* 1. DDL i.e. Data Definition Language */
 
 /* Create new database with name DatabaseName according to the model's database properties */
@@ -62,7 +66,22 @@ GROUP BY (ValueToBeGrouped)
 SELECT AVG(ValueToAverage)
 FROM TableName
 
-/* Views */
+/* 3. Views and Stored Procedures */
                    
+-- Create a new view                   
 CREATE VIEW ViewName AS
 SELECT ...
+
+-- Create a stored procedure with parameters
+CREATE PROCEDURE ProcedureName
+	-- Define the parameter and its default value
+	@Variable DataType(length) = DEFAULTVALUE
+AS
+BEGIN
+	SELECT Value FROM TableName
+	WHERE Value = @Variable
+END
+GO
+
+-- Run your stored procedure
+EXEC ProcedureName @Variable=VALUE
