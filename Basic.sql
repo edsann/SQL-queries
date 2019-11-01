@@ -57,4 +57,8 @@ SELECT
    COUNT(ValueToBeCounted) AS NumberOfRecords
 FROM TableName
 GROUP BY (ValueToBeGrouped)
+                   
+-- Gives the average
+SELECT AVG(ValueToAverage)
+FROM TableName
 
