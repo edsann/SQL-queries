@@ -62,3 +62,7 @@ GROUP BY (ValueToBeGrouped)
 SELECT AVG(ValueToAverage)
 FROM TableName
 
+/* Views */
+                   
+CREATE VIEW ViewName AS
+SELECT ...
