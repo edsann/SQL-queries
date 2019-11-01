@@ -45,4 +45,16 @@ VALUES (Value1_1, Value1_2),
         (Value2_1, Value2_2),
         (Value3_1, Value3_2)
 
+/* Aggregate functions: COUNT, AVG, MIN, MAX */
+
+-- Group records in TableName by a specific value
+SELECT ValueToBeGrouped FROM TableName
+GROUP BY (ValueToBeGrouped)
+
+-- Gives the amount of record with a grouped value
+SELECT 
+  ValueToBeGrouped,
+   COUNT(ValueToBeCounted) AS NumberOfRecords
+FROM TableName
+GROUP BY (ValueToBeGrouped)
 
