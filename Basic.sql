@@ -115,3 +115,10 @@ SELECT ..., dbo.FunctionName(@Variable1,@Variable2) AS Result
 -- Built-in functions
 SCOPE_IDENTITY() -- It returns the last Identity value corresponding to the specified column
 GETDATE() -- It returns today's date-time
+		   
+/* In order to rollback from critic operations, like TRUNCATE or DELETE or massive UPDATEs */
+-- Begin transaction
+BEGIN TRAN
+	[QUERY]
+COMMIT -- To finalize the query (this command ends the transaction), or
+ROLLBACK -- To undo the query (this command ends the transaction)
