@@ -66,7 +66,7 @@ GROUP BY (ValueToBeGrouped)
 SELECT AVG(ValueToAverage)
 FROM TableName
 
-/* 3. Views and Stored Procedures */
+/* 3. Views, Stored Procedures, Functions */
                    
 -- Create a new view                   
 CREATE VIEW ViewName AS
@@ -85,3 +85,28 @@ GO
 
 -- Run your stored procedure
 EXEC ProcedureName @Variable=VALUE
+
+-- Create Function
+CREATE FUNCTION FunctionName
+(
+    -- Add the parameters for the function here
+    @Variable1 DataType1,
+    @Variable2 DataType2
+)
+RETURNS DataTypeResult
+AS
+BEGIN
+    -- Declare the return variable here
+    DECLARE @Result DataTypeResult
+
+    -- Add the T-SQL statements to compute the return value here
+    SELECT @Result = [EXPRESSION WITH @Variable1 and @Variable2]
+
+    -- Return the result of the function
+    RETURN @Result
+
+END
+GO
+
+-- Calling the function
+SELECT ..., dbo.FunctionName(@Variable1,@Variable2) AS Result
