@@ -38,6 +38,7 @@ TRUNCATE TABLE TableName
 /* Remove a column from the table */
 DROP Attribute2
 
+
 /* Remove the whole table */
 DROP TABLE TableName
 
@@ -110,3 +111,7 @@ GO
 
 -- Calling the function
 SELECT ..., dbo.FunctionName(@Variable1,@Variable2) AS Result
+
+-- Built-in functions
+SCOPE_IDENTITY() -- It returns the last Identity value corresponding to the specified column
+GETDATE() -- It returns today's date-time
