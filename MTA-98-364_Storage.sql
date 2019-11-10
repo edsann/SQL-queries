@@ -12,9 +12,12 @@ CREATE TABLE Customers(
 )
 
 /*
-+ 1NF: Eliminate repeating groups
-  - Establish a primary identifier (1NFa)
-  - Remove multivalued attributes (1NFb)
++ 1st NORMAL FORM: it ensures records are in an 'entity' format by:
+  - Establishing a primary identifier (1NFa)
+  - Removing repeating and multivalued attributes (1NFb)
+Check the First Normal Form:
+Do each table have a single or composite Primary Key?
+Do each column contain a single value?
 */
 
 CREATE TABLE Customers(
@@ -39,9 +42,10 @@ CREATE TABLE Customers(
 )
 
 /*
-+ 2NF: Eliminate redundant data
-  - The database must be in 1NF
++ 2nd NORMAL FORM: Eliminate redundant data introduced in applying the 1NF
+(the database must be in 1NF)
   - Move redundant data into related tables
+* Watch out any related data when working with tables which use multiple attributes to define unique values ("Composite Primary Keys").
 */
 CREATE TABLE Customers(
   CustomerID,
@@ -79,12 +83,11 @@ CREATE TABLE CreditCardDetails(
 )
 
 /*
-+ 3NF: Eliminate columns not dependent on key fields
-  - The database must be in 2NF
++ 3rd NORMAL FORM: Eliminate columns not dependent on key fields (the database must be in 2NF)
   - Remove transitively dependent data that does not depend on key
 */
 CREATE TABLE Customers(
-  CustomerID,
+  CustomerID,         --PK
   CustomerFirstName,
   CustomerLastName,
   StreetAddress,
@@ -93,17 +96,17 @@ CREATE TABLE Customers(
   ZIP
 )
 CREATE TABLE CustomerPhone(
-  PhoneNumber,        -- Composite Primary Key (1NFa)
-  CustomerID          -- Composite Primary Key (1NFa)
+  PhoneNumber,        --PK
+  CustomerID          --PK
   PhoneType
 )
 CREATE TABLE CustomerCreditCard(
-  CreditCardNumber,   -- Composite Primary Key (1NFa)
-  CustomerID,         -- Composite Primary Key (1NFa)
+  CreditCardNumber,   --PK
+  CustomerID,         --PK
   PrimaryCreditCard (y/n)
 )
 CREATE TABLE CreditCardDetails(
-  CreditCardNumber,   -- Primary key (1NFa)
+  CreditCardNumber,   --PK
   CardExpirationDate,
   CreditCardName,
   BillingAddress,
@@ -115,10 +118,14 @@ CREATE TABLE ORDERS(
   OrderID,		    -- Primary Key (1NFa)
   CustomerID,
   ProductID,
-  /*ProductName,*/	-- Moved to the new table Products, since it doesn't depend on PK OrderID, but on ProductID (3NF)
+  /*ProductName,*/	-- This column doesn't depend on PK OrderID, but on ProductID: therefore, we'll move it to the new table Products (3NF)
   PurchasePrice,
   Quantity,
-  /*Total*/		      -- Removed, it can be derived with PurchasePrice*Quantity (3NF)
+  /*Total*/		      -- This value can be derived by multiplying PurchasePrice and Quantity, so we'll remove it from the table (3NF)
+)
+CREATE TABLE Products(
+  ProductID,      --PK
+  ProductName
 )
 
 /*
