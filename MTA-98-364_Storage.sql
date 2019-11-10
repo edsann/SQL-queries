@@ -84,7 +84,9 @@ CREATE TABLE CreditCardDetails(
 
 /*
 + 3rd NORMAL FORM: Eliminate columns not dependent on key fields (the database must be in 2NF)
-  - Remove transitively dependent data that does not depend on key
+  - Remove transitively dependent data that does not depend on Primary Keys
+* Non-transitively PK-dependent data: data that can't be derived from the PK
+* Transitively PK-dependent data: data that can be derived from the PK
 */
 CREATE TABLE Customers(
   CustomerID,         --PK
