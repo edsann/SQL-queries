@@ -17,8 +17,8 @@ USE DatabaseName;
 CREATE TABLE TableName( 
   Attribute1 type1 IDENTITY(1000,1) NOT NULL,   --Attribute of type1 (int, char-varchar-nvarchar(length), money, date, etc.); Identity is a value that increases automatically, starting from 1000 and increasing by 1; no NULL values are allowed
   Attribute2 type2 NULL,
-  /* Specify the Primary Key */
-  CONSTRAINT PK_TableName PRIMARY KEY CLUSTERED (Attribute1) 
+  /* Specify the Primary Key/Keys */
+  CONSTRAINT PK_TableName PRIMARY KEY CLUSTERED (Attribute1, Attribute2) 
 )
 
 /* Add a constraint with a specific criterion on an attribute of the table */
