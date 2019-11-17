@@ -17,8 +17,18 @@ USE DatabaseName;
 CREATE TABLE TableName( 
   Attribute1 type1 IDENTITY(1000,1) NOT NULL,   --Attribute of type1 (int, char-varchar-nvarchar(length), money, date, etc.); Identity is a value that increases automatically, starting from 1000 and increasing by 1; no NULL values are allowed
   Attribute2 type2 NULL,
-  /* Specify the Primary Key/Keys */
-  CONSTRAINT PK_TableName PRIMARY KEY CLUSTERED (Attribute1, Attribute2) 
+/* Specify the Primary Key/Keys */
+CONSTRAINT PK_TableName PRIMARY KEY CLUSTERED (Attribute1, Attribute2)
+/* Specify the Foreign Key/Keys */
+/* Foreign keys are created on the child tables, where the same field appears many times */
+/* The Parent tables are supposed to contain the key field only once, being the primary key there */
+CONSTRAINT FK_TableName_ParentTableName FOREIGN KEY (Attribute2)
+	REFERENCES ParentTableName(Attribute2) -- Reference to the field in the Parent Table 
+	/* Referential Integrity, i.e. propagation properties */
+	ON DELETE CASCADE -- Activate the 'cascade' option for Deleting the key on the Parent Table: 
+		-- any deletion in the parent table will delete any related record on the child table (other options: no action, set null)
+	ON UPDATE CASCADE -- Activate the 'cascade' option for Updating the key on the Parent Table
+		-- any update in the parent table will update any related record on the child table (other options: no action, set null) 
 )
 
 /* Add a constraint with a specific criterion on an attribute of the table */
