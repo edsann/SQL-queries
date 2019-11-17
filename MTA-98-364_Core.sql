@@ -38,10 +38,16 @@ CHECK (Attribute1 [condition])
 -- To remove it:
 DROP CONSTRAINT CK_Attribute1
 
-/* Add a Unique Index to check uniqueness */
-CREATE UNIQUE INDEX IX_Attribute1
-ON TableName(Attribute1)
-                   
+/* Add a Clustered Index on a new table (every table can have at most one clustered index: it's the main sorting index of the table) */
+/* If the table has a Primary Key constraint, the PK itself is the clustered index of the table */
+/* The UNIQUE options sets the uniqueness of the field: repeated values will not be allowed */
+CREATE UNIQUE CLUSTERED INDEX IX_TableName_Attribute1 ON TableName(Attribute1)
+/* Add a Non-Clustered Index on an existing table (non-clustered indexes are additional indexes, basically setting additional sorting orders to the clustered index of the table) */
+CREATE NONCLUSTERED INDEX IX_TableName_Attribute2 ON TableName(Attribute2)
+
+
+		   
+		   
 /* Erase the content of the table, though keeping the columns intact */
 TRUNCATE TABLE TableName
 
