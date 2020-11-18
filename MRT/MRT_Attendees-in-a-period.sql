@@ -1,9 +1,12 @@
-/* Extracting the univocal attendances, by computing the transits on a specific entrance @VARCO, setting a specific time period between @DATAORAINIZIO and @DATAORAFINE */
-/* It gives back the amount of employees, contractors or guests attending within the specified period */
-/* It returns a table with the following format: */
-/* Employees;Amount_of_employees */
-/* Contractors;Amount_of_contractors */
-/* Guests;Amount_of_guests */
+/* Quantità di matricole in un certo periodo */
+
+-- Estrae le presenze univoche, calcolando i transiti su uno specifico varco @VARCO, impostando un periodo compreso tra @DATAORAINIZIO e @DATAORAFINE
+-- Restituisce la quantità di dipendenti, esterni o visitatori presenti nel periodo specificato.
+-- Riporta una tabella nel seguente formato:
+-- Dipendenti;Numero_di_dipendenti;
+-- Esterni;Numero_di_esterni;
+-- Visitatori;Numero_di_visitatori;
+
 USE MRT
 
 /* Variables */
