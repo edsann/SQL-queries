@@ -1,4 +1,6 @@
-/* Richiede che T108FIELDID='1' contenga il campo COLORE e T108FIELDID='2' contenga il campo QUALIFICA */
+/* Vista logica dipendenti con campi programmabili, per stampa badge */
+
+-- La vista seleziona, oltre ai soliti dati per stampa badge, anche i campi programmabili COLORE (Field=1) e QUALIFICA (Field=2)
 
 SELECT
   RIGHT(D.T26CODICE,6) AS MATRICOLA,
