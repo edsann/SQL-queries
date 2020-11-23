@@ -1,3 +1,5 @@
+/* Select-DateTimeformat.sql
+/*
 /* Select date and time in a specific format */
 
 SELECT format(getdate(),'yyyyMMddHHmmssffff')
