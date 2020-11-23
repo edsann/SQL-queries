@@ -4,6 +4,7 @@
 /* Namely, the file is named "[DATABASE_NAME]-[DBVER]_[yyyyMMdd_HHmm].bak"
 /* The backup file is saved in @FULLPATH. */
 /* NOTE: It requires the roles 'sysadmin','db_owner' or 'db_backupoperator' */
+/* Source : https://docs.microsoft.com/it-it/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-ver15
 
 USE MRT
 
