@@ -1,7 +1,9 @@
-/* Vista logica per stampa badge con campi programmabili */
-
--- Vista logica da usare per il software di stampa dei badge.
--- Sono gestiti i campi programmabili a scelta singola (TIPO LAYOUT, selezionabile tra 'Nome esteso' o 'Cognome esteso') e testo libero (QUALIFICA STAMPA).
+/* MRT_Select-EmployeesBadge-LayoutQualifica.sql
+/*
+/* Vista logica per stampa badge con campi programmabili
+/* Vista logica da usare per il software di stampa dei badge.
+/* Sono gestiti i campi programmabili a scelta singola (TIPO LAYOUT, selezionabile tra 'Nome esteso' o 'Cognome esteso') e testo libero (QUALIFICA STAMPA).
+*/
 
 SELECT 
 	RIGHT(DIP.T26CODICE,5) AS MATRICOLA,
