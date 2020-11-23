@@ -1,15 +1,18 @@
-/* Recupero timbrature in formato WinattID */
-/* Da lanciare DOPO aver corretto l'associazione ID-IDX con MicronImport, in quanto effettua una JOIN sulla T25COMBADGE */
+/* MRT_Export-WinattIDFull.sql
+/* 
+/* Recupero timbrature in formato WinattID
+/* Legge il campo FlagEntraEsce dai parametri dela T103COMPARAMS
+/* Da lanciare DOPO aver corretto l'associazione ID-IDX, in quanto effettua una JOIN sulla T25COMBADGE
+*/
 
 /*
 Tracciato export presenze WINATTID:
-Campo:				Lunghezza:	Note:
-Codice del varco	3nn			Ultimi tre caratteri codice varco
-ID/IDX Badge		10nn/an		Identificativo badge (ID 10nn) oppure codice di traccia (IDx 10an)
-Flag Entra/Esce		1nn			(‘0’=Entra, ‘1’=Esce), dalla versione 5.1.6 è possibile parametrare il carattere utilizzato per identificare i movimenti di entrata e di uscita
-Causale				4nn			Codice causale (0000=Nessuna causale)
-Data/ora			10nn		Formato GGMMAAHHMM
-CRLF				--			CRLF
+Campo | Lunghezza | Note
+Codice del varco | 3nn | Ultimi tre caratteri codice varco
+ID/IDX Badge | 10nn/an | Identificativo badge (ID 10nn) oppure codice di traccia (IDx 10an)
+Flag Entra/Esce | 1nn | (‘0’=Entra, ‘1’=Esce), dalla versione 5.1.6 è possibile parametrare il carattere utilizzato per identificare i movimenti di entrata e di uscita
+Causale | 4nn | Codice causale (0000=Nessuna causale)
+Data/ora | 10nn | Formato GGMMAAHHMM
 */
 
 -- Variabile: data ora di inizio del periodo
