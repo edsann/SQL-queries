@@ -1,6 +1,8 @@
-/* Vista logica dipendenti con campi programmabili, per stampa badge */
-
--- La vista seleziona, oltre ai soliti dati per stampa badge, anche i campi programmabili COLORE (Field=1) e QUALIFICA (Field=2)
+/* MRT_Select-EmployeesBadge-ColoreQualifica.sql
+/*
+/* Vista logica dipendenti con campi programmabili, per stampa badge
+/* La vista seleziona, oltre ai soliti dati per stampa badge, anche i campi programmabili COLORE (Field=1) e QUALIFICA (Field=2)
+*/
 
 SELECT
   RIGHT(D.T26CODICE,6) AS MATRICOLA,
