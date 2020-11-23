@@ -1,4 +1,6 @@
-/* Properties (rows, total occupied space, total free space, etc.) of all the tables in a database */
+/* Get-TablesProperties.sql
+/*
+/* It lists the general properties (rows, total occupied space, total free space, etc.) of all the tables in a specified database */
 
 	USE DATABASE_NAME
 	SELECT 
