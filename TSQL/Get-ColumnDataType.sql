@@ -1,3 +1,5 @@
+/* Get-ColumnDataType.sql
+/*
 /* It returns the data_type of 'yourColumnName' in 'yourTableName' */
 
 SELECT DATA_TYPE 
