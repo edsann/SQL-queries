@@ -1,10 +1,11 @@
-/* Author: P.Simonetta */
-
+/* MRT_Select-MonthlyPeopleAverage.sql 
+/*
 /* It returns a table containing a row for each day in the following format:
 	YYYYMMDD;Amount_of_employees;Amount_of_external_collaborators;Amount_of_guests;Total_amount
 For each day of the month. At the end of the month, it builds an additional row in the following format:
 	Average of month YYYYMM;Monthly_averaged_employees;Monthly_averaged_external;Monthly_averaged;guests;Total_averaged
 Attendances are computed depending on univocal entry transits through a specific entrance (@VARCO) starting from a specific date (@DATAORAINIZIO) */
+
 USE MRT
 
 /* VARIABILI */
