@@ -1,8 +1,10 @@
+/* Search-SqlStringStoredProcedure.sql
+/*
 /* Creating a stored procedure to search a string in all tables, under the preferred database */
 /* Executing it, the value of the parameter @SearchStr will be asked */
 /* It returns [schema].[table].[column];value */
 
-/* It only works with strings */
+/* It only works with strings ! */
 
 CREATE PROC SearchAllTables
 (
