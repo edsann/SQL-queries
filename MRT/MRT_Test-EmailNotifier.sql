@@ -1,3 +1,5 @@
+/* MRT_Test-EmailNotifier.sql
+/*
 /* Query to cross data from table T128COMTMAIL (mail log), T105COMUSERLOG (users log) and T37ACCTRANSITI (transits log) */
 /* Helpful in troubleshooting the Notifier procedure */
 /* Requires the following variables */
