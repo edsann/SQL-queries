@@ -1,3 +1,5 @@
+/* Select-ExcludeNumbers.sql
+/*
 /* Filters only NON-NUMERICAL results in MyColumn */
 
 USE DatabaseName
