@@ -1,3 +1,5 @@
+/* MRT_Select-ReportsAuthorizations.sql
+/*
 /* It returns a table containing USER;FLAGUSER;DESCRIPTION;CANMODIFY;CANUSE for the reports table */
 
 SELECT 
