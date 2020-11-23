@@ -1,7 +1,9 @@
 /* MRT_New-DatabaseBackup.sql
 /*
 /* It performs a new database backup, named using the @FILENAME variable composed with the @VERSION variable read from table T05COMFLAGS. 
-/* The backup file is saved in @FULLPATH.
+/* Namely, the file is named "[DATABASE_NAME]-[DBVER]_[yyyyMMdd_HHmm].bak"
+/* The backup file is saved in @FULLPATH. */
+/* NOTE: It requires the roles 'sysadmin','db_owner' or 'db_backupoperator' */
 
 USE MRT
 
