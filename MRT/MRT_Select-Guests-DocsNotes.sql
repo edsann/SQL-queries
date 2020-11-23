@@ -1,7 +1,9 @@
-/* Visitatori di Fiera Sicurezza 2019, ordinati per data e cognome */
-/* Campi programmabili: Documentazione sì/no, Note aggiuntive */
+/* MRT_Select-Guests-DocsNotes.sql
+/*
+/* Visitatori allo stand, ordinati per data e cognome
+/* Vengono listati anche i campi programmabili Documentazione (sì/no) e Note aggiuntive */
 
-USE [MRT_SICUREZZA-2019];
+USE [MRT];
 GO
 
 DECLARE @DATAINIZIO NVARCHAR(14)
