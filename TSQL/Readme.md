@@ -8,4 +8,7 @@
 * `Get-TableName` searches all tables containing a specific string in the name
 * `Get-TablesProperties` returns all the general properties of the tables in a specific database
 * `New-SqlSysadminUser` creates a new sysadmin login in a specific database
-* `Search-SqlString` search a specific string in
+* `Search-SqlString` search a specific text within a specific database, returing the column name and value
+* `Search-SqlStringStoredProcedure` creates a stored procedure to search a specific text in a specific database
+* `Set-SqlMixedAuthentication` enables the Mixed Authentication on the current instance
+* `Stop-SqlConnections` set the database in single user mode, killing all connections
