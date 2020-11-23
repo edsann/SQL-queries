@@ -1,3 +1,5 @@
+/* MRT_Get-CumulatedAttendancesInPeriod.sql
+/*
 /* Quantità di matricole in un certo periodo */
 
 -- Estrae le presenze univoche, calcolando i transiti su uno specifico varco @VARCO, impostando un periodo compreso tra @DATAORAINIZIO e @DATAORAFINE
