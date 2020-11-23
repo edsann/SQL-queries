@@ -1,6 +1,8 @@
+/* MRT_Get-EnabledOnGates.sql
+/*
 /* Restituisce CodVarco,DescrVarco,NumMatricole */
-/* Dove NumMatricole è il totale delle matricole, tra quelle inserite nel range delle due
-/* T35CODICE IN (), abilitate sul varco in questione */
+/* Dove NumMatricole è il totale delle matricole, tra quelle inserite nel range T35CODICE IN (), abilitate sul varco in questione
+*/
 
 SELECT 
   CODVARCO, 
