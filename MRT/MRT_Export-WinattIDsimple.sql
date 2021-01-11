@@ -1,7 +1,7 @@
 /* MRT_Export-WinattIDsimple.sql
-/*
-/* Creates a table with all the recovered records from transits in the WinattID format.
-/* Each field is printed as a column.
+/* 
+/* Crea una tabella con tutte le timbrature recuperate, nel formato WinattID.
+/* Le timbrature vengono 'ricostruite' dalla tabella dei transiti.
 */
 
 USE MRT 
@@ -11,6 +11,7 @@ SELECT CONCAT(
 	T37ENTRAESCE-1, --EntraEsce(0,1)		
 	CASE T37CAUSALE	-- Causale
 		WHEN '' THEN '0000'
+		ELSE T37CAUSALE
 		END,
 	SUBSTRING(T37DATAORA,7,2), -- Data ora (GG)
 	SUBSTRING(T37DATAORA,5,2), -- Data ora (MM)
