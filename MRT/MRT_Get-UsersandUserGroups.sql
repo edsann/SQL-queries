@@ -11,7 +11,7 @@ SELECT
 	T26COGNOME AS Cognome, 
     T26NOME AS Nome, 
     CASE T21CANSELECTGROUP WHEN '0' THEN 'No' WHEN '1' THEN 'Sì' END AS [Può cambiare gruppo],
-    Duplicati.T36CONTROLLATO AS [Gruppo/i utenti], 
+    Duplicati.GruppiDiUtenti AS [Gruppo/i utenti], 
 	SUBSTRING(T21LastLogin, 1, 4) + '-' + SUBSTRING(T21LastLogin, 5, 2) + '-' + SUBSTRING(T21LastLogin, 7, 2) AS [Ultimo login]
 FROM T21COMUTENTI 
 LEFT OUTER JOIN T26COMDIPENDENTI ON T21DIPENDENTE = T26CODICE AND T21CodAziendaInterna = T26CodAzienda -- Dipendenti
