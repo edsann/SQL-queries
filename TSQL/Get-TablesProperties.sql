@@ -29,4 +29,4 @@ WHERE
 GROUP BY 
     t.Name, s.Name, p.Rows
 ORDER BY 
-    t.Name
+    UsedSpaceMB DESC
