@@ -1,4 +1,5 @@
 -- The following queries return information about currently allocated memory.
+
 SELECT
 (total_physical_memory_kb/1024) AS Total_OS_Memory_MB,
 (available_physical_memory_kb/1024)  AS Available_OS_Memory_MB
@@ -13,6 +14,7 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory; 
 
 -- The following query returns information about current SQL Server memory utilization.
+
 SELECT
 sqlserver_start_time,
 (committed_kb/1024) AS Total_Server_Memory_MB,
