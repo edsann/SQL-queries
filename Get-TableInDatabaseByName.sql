@@ -1,5 +1,3 @@
-/* Get-TableName.sql
-/*
 /* It Searches a table in the database by table name */ 
 
 USE DatabaseName -- Insert database name
