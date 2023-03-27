@@ -1,5 +1,3 @@
-/* Get-SqlUsersRoles.sql
-/*
 /* It lists all SQL server users, specifying the corresponding roles */
 
 SELECT
