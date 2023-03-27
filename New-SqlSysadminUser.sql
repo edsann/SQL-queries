@@ -1,5 +1,3 @@
-/* New-SqlSysadminUser.sql
-/*
 /* It creates a new sysadmin login with the specified password */
 
 USE YourDatabaseName
