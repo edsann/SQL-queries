@@ -1,5 +1,3 @@
-/* Get-Column.sql
-/*
 /* Search all columns containing a specific string in the description, stating also the belonging tables */
 
 USE
