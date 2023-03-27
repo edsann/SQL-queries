@@ -1,5 +1,3 @@
-/* Search-SqlString.sql
-/*
 /* Direct query to find SEARCH_TEXT within the DATABASE_NAME, searching in all the tables and columns */
 /* Just replace DATABASE_NAME with your database and SEARCH_TEXT with the string you're looking for */
 /* It returns ColumnName;ColumnValue */
