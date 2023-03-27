@@ -1,5 +1,3 @@
-/* Set-SqlMixedAuthentication.sql
-/*
 /* The script activates the Mixed Mode Authentication in the current SQL Server instance */
 
 USE [master]
