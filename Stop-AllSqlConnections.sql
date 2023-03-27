@@ -1,5 +1,3 @@
-/* Stop-SqlConnections.sql
-/*
 /* Kill connections and set to single user mode */
     
 USE Database_name
