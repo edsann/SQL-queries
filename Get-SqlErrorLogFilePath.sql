@@ -1,8 +1,5 @@
-/* Get-SqlErrorLogPath.sql
-/*
 /* It returns the error log path of the current SQL Server instance */
 /* https://blog.sqlauthority.com/2015/03/24/sql-server-where-is-errorlog-various-ways-to-find-its-location/ */
-
 
 USE master
 GO
